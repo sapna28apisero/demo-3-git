@@ -6,11 +6,11 @@ pipeline {
       steps {
             bat 'mvn clean install'
       }
-     stage('Deploy') {
+    }
+    stage('deploy') {
       steps {
             bat 'mvn package deploy -DmuleDeploy'
       }
-	}
     }
   }
-}
+} 
